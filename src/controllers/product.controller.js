@@ -9,3 +9,10 @@ exports.addProduct = async (req, res) => {
   const product = await Product.create(req.body);
   res.json(product);
 };
+
+// READ
+exports.getProducts = async (req, res) => {
+  console.log('Get Products...');
+  const products = await Product.find();
+  res.json(products);
+};
